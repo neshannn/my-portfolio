@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--bg-main);
+  --color-surface: var(--bg-surface);
+  --color-concrete: var(--bg-concrete);
+  --color-accent: var(--accent-primary);
+  --color-text: var(--text-main);
+  --color-on-accent: var(--on-accent);
+  --color-text-muted: var(--text-muted);
+  
+  --font-display: "Archivo Black", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-elegant: "Syne", sans-serif;
+  
+  --shadow-brutal: var(--brutal-shadow);
+}
+
+:root {
+  /* Default Light Mode */
+  --bg-main: #f0f0f0;
+  --bg-surface: #ffffff;
+  --bg-concrete: #e5e5e5;
+  --accent-primary: #ff5f1f;
+  --on-accent: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --brutal-shadow: 6px 6px 0px 0px #000000;
+  --dot-opacity: 0.1;
+  --theme-border: rgba(0,0,0,0.1);
+  --dot-color: rgba(0,0,0,var(--dot-opacity));
+}
+
+.dark {
+  /* Default Dark Mode */
+  --bg-main: #0a0a0a;
+  --bg-surface: #141414;
+  --bg-concrete: #1e1e1e;
+  --accent-primary: #ff5f1f;
+  --on-accent: #ffffff;
+  --text-main: #e5e5e5;
+  --text-muted: #888888;
+  --brutal-shadow: 6px 6px 0px 0px #000000;
+  --dot-opacity: 0.08;
+  --theme-border: rgba(255,255,255,0.05);
+  --dot-color: rgba(255,255,255,var(--dot-opacity));
+}
+
+body {
+  @apply bg-background text-text font-mono selection:bg-accent selection:text-on-accent transition-colors duration-500;
+  margin: 0;
+  background-image: 
+    radial-gradient(var(--dot-color) 1px, transparent 1px),
+    radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.bg-grain {
+  @apply fixed inset-0 pointer-events-none z-[100] opacity-[0.05];
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Tactile Utilities */
+.brutal-card {
+  @apply bg-surface border-2 transition-all duration-300;
+  border-color: var(--theme-border);
+  box-shadow: var(--shadow-brutal);
+}
+
+.brutal-btn {
+  @apply bg-accent text-on-accent font-display uppercase px-8 py-4 border-2 border-black transition-all active:translate-x-0.5 active:translate-y-0.5;
+  box-shadow: var(--shadow-brutal);
+}
+
+.tape {
+  @apply bg-accent/30 backdrop-blur-sm h-8 w-32 -rotate-3 absolute z-10 opacity-70 transition-opacity;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.heading-brutal {
+  @apply font-display uppercase leading-[0.85] tracking-tighter;
+}
+
+.border-dot {
+  background-image: radial-gradient(circle, var(--theme-border) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
