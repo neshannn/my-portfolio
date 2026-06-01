@@ -17,7 +17,6 @@ const AllProjects = () => {
 
   const videos = [
     { title: 'Yuta Cardigan Edit', file: '/videos/yuta-cardigan.mp4' },
-    { title: 'Experimental_Wtf', file: '/videos/wtf.mp4' },
     { title: 'Double Take', file: '/videos/doubletake.mp4' },
     { title: 'Light Switch', file: '/videos/LightSwitch.mp4' },
     { title: 'No Idea', file: '/videos/noidea.mp4' },
