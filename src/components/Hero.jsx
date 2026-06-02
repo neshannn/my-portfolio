@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CornerRightDown } from 'lucide-react';
 
@@ -56,11 +55,14 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="flex flex-col gap-4"
           >
-            <button className="brutal-btn w-full md:w-auto self-start">
+            <a 
+              href="mailto:kandelnishant01@gmail.com"
+              className="brutal-btn w-full md:w-auto self-start inline-block text-center"
+            >
               Initialize Contact
-            </button>
+            </a>
             <div className="text-[8px] text-text-muted font-bold uppercase tracking-[0.5em] transition-colors duration-500">
-              Data_Source: Aboutme.txt / Latency: 0ms
+              Data_Source: Its me Ofc / Latency: 0ms
             </div>
           </motion.div>
         </div>

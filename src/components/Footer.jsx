@@ -34,7 +34,7 @@ const Footer = () => {
 
             <div className="flex flex-col gap-4">
               <span className="text-accent text-[10px] font-bold uppercase tracking-[0.4em] transition-colors duration-500">Direct_Relay</span>
-              <a href="mailto:nishant@example.com" className="heading-brutal text-3xl md:text-5xl hover:text-accent transition-colors text-text transition-all duration-500">
+              <a href="mailto:kandelnishant01@gmail.com" className="heading-brutal text-3xl md:text-5xl hover:text-accent transition-colors text-text transition-all duration-500">
                 HI@NISHANT.DEV
               </a>
             </div>
