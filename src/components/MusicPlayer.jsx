@@ -16,6 +16,8 @@ const MusicPlayer = ({ isOpen, onClose }) => {
     { title: 'Bargad', file: '/music/bargad.mp3' },
     { title: 'About You', file: '/music/AboutYou.mp3' },
     { title: 'Bye', file: '/music/bye.mp3' },
+    { title: 'Shape of My Heart', file: '/music/shapeofmyheart.mp3' },
+    { title: 'Magnolia', file: '/music/Magnolia.mp3' },
 
   ];
 
